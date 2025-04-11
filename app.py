@@ -49,7 +49,7 @@ if user_input:
     #    Ex: http://localhost:5678/webhook/rag
     try:
         response = requests.post(
-            "https://n8n.srv749429.hstgr.cloud/webhook/f5808099-158f-49c5-b664-e2a288f3bb1d",
+            "https://n8n.srv749429.hstgr.cloud/webhook/96ab6917-eba1-47c1-80cb-d4be6da6a364",
             json={"question": user_input},
             timeout=60
         )
