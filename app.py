@@ -2,18 +2,18 @@ import streamlit as st
 import requests
 
 # --- BARRE LATÉRALE ---
-st.sidebar.title("📚 POC Base documentaire IFA")
+st.sidebar.title("📚 POC Base documentaire Mobilité Club France")
 
 # Texte descriptif
 st.sidebar.write(
     "Cette application vous permet de consulter et d'interroger la base documentaire "
-    "d'IFA"
+    "de Mobilité Club France."
 )
 
 # Exemple de documents à lister dans la sidebar
 # À adapter selon la structure de vos propres documents (titres, URL, etc.)
 documents_tcm = [
-    {"title": "Les systèmes d'intelligence artificielle et les conseils d'administration.pdf", "url": ""},
+    {"title": "vignette-autoroutiere-en-allemagne-le-sujet-se-precise.pdf", "url": "https://www.automobile-club.org/actualites/l-auto-et-la-loi/vignette-autoroutiere-en-allemagne-le-sujet-se-precise?pdf=1"},
   ]
 
 st.sidebar.markdown("### Documents disponibles")
@@ -27,17 +27,17 @@ st.sidebar.write(
     )
 
 st.sidebar.write(
-    "Méthode RAG (Contextual Retriving)"
+    "Méthode RAG (Contextual Retriving) + vector store"
     )
 
 # -- INITIALISATION --
 if "conversation" not in st.session_state:
     st.session_state.conversation = []
 
-st.title("📚 IFA Chatbot 🤖")
+st.title("📚 Mobilité Club France Chatbot 🤖")
 st.text("Testez le chatbot RAG en fonction des éléments présents dans les documents")
 
-# 1) Récupérer la question AVANT l’affichage
+# 1) Récupérer la question AVANT l’affichage    
 user_input = st.chat_input("Posez votre question ici…")
 
 if user_input:
